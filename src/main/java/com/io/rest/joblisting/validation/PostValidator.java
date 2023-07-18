@@ -9,6 +9,8 @@ public class PostValidator {
 
     private static final int PROFILE_MIN_LENGTH = 5;
     private static final int PROFILE_MAX_LENGTH = 80;
+    private static final int LOCATION_MIN_LENGTH=4;
+    private static final int LOCATION_MAX_LENGTH=20;
     private static final int DESC_MIN_LENGTH = 20;
     private static final int DESC_MAX_LENGTH = 500;
     private static final int EXPERIENCE_MIN = 0;
@@ -35,5 +37,10 @@ public class PostValidator {
 
     private static boolean isValidTechStack(ArrayList<String> techStack) {
         return techStack != null && !techStack.isEmpty();
+    }
+
+    private static boolean isValidLocation(String location)
+    {
+        return !StringUtils.isEmpty(location) && location.length() >= LOCATION_MIN_LENGTH && location.length() <= LOCATION_MAX_LENGTH;
     }
 }

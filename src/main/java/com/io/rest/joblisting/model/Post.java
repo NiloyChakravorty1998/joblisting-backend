@@ -16,6 +16,8 @@
         private String id;
         private String profile;
         private String desc;
+        private String location;
+        private String imageUrl;
         private int experience;
         private ArrayList<String> techStack = new ArrayList();
 
