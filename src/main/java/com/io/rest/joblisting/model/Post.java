@@ -2,6 +2,7 @@
 
     import lombok.Data;
     import lombok.NoArgsConstructor;
+    import org.springframework.beans.factory.annotation.Value;
     import org.springframework.data.annotation.Id;
     import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -11,6 +12,7 @@
     @Data
     @NoArgsConstructor
     public class Post {
+
 
         @Id
         private String id;

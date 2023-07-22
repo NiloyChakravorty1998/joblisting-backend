@@ -24,6 +24,7 @@ public class PostServiceImpl implements PostService{
 
     @Override
     public List<Post> getAll() {
+        System.out.println();
         return postRepo.findAll();
     }
 
@@ -34,6 +35,9 @@ public class PostServiceImpl implements PostService{
 
     @Override
     public Post newPost(Post post) {
+        if(post.getImageUrl() ==null || post.getImageUrl().trim().equals("")) {
+            post.setImageUrl(IMAGE_URL);
+        }
         return postRepo.save(post);
     }
 
